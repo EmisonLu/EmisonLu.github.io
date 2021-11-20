@@ -25,7 +25,7 @@ var gravity = 0.0;
 function setup() {
  cnv=createCanvas(400, 400);
  cnv.position(document.body.clientWidth/2 - 200,100)
-	loadImage("assets/1.jpg", function(img) {
+	loadImage("image/icon/1.jpg", function(img) {
 		img.loadPixels();
 		console.log(img);
 		for (var x = 0; x < imgWidth; x++) {
