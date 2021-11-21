@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="zn" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>仓库 - Docker</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../Docker.html"><strong aria-hidden="true">1.</strong> Docker</a></li><li class="chapter-item expanded "><a href="../基本概念/基本概念.html"><strong aria-hidden="true">2.</strong> 基本概念</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../基本概念/镜像.html"><strong aria-hidden="true">2.1.</strong> 镜像</a></li><li class="chapter-item expanded "><a href="../基本概念/容器.html"><strong aria-hidden="true">2.2.</strong> 容器</a></li><li class="chapter-item expanded "><a href="../基本概念/仓库.html" class="active"><strong aria-hidden="true">2.3.</strong> 仓库</a></li></ol></li><li class="chapter-item expanded "><a href="../安装Docker/安装Docker.html"><strong aria-hidden="true">3.</strong> 安装Docker</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../安装Docker/镜像加速器.html"><strong aria-hidden="true">3.1.</strong> 镜像加速器</a></li></ol></li><li class="chapter-item expanded "><a href="../使用镜像/使用镜像.html"><strong aria-hidden="true">4.</strong> 使用镜像</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../使用镜像/获取镜像.html"><strong aria-hidden="true">4.1.</strong> 获取镜像</a></li><li class="chapter-item expanded "><a href="../使用镜像/列出镜像.html"><strong aria-hidden="true">4.2.</strong> 列出镜像</a></li><li class="chapter-item expanded "><a href="../使用镜像/删除本地镜像.html"><strong aria-hidden="true">4.3.</strong> 删除本地镜像</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> 利用 commit 理解镜像构成</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.5.</strong> Dockerfile</div></li></ol></li><li class="chapter-item expanded "><a href="../操作容器/操作容器.html"><strong aria-hidden="true">5.</strong> 操作容器</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../操作容器/启动.html"><strong aria-hidden="true">5.1.</strong> 启动</a></li><li class="chapter-item expanded "><a href="../操作容器/守护态运行.html"><strong aria-hidden="true">5.2.</strong> 守护态运行</a></li><li class="chapter-item expanded "><a href="../操作容器/终止.html"><strong aria-hidden="true">5.3.</strong> 终止</a></li><li class="chapter-item expanded "><a href="../操作容器/进入容器.html"><strong aria-hidden="true">5.4.</strong> 进入容器</a></li><li class="chapter-item expanded "><a href="../操作容器/导出和导入.html"><strong aria-hidden="true">5.5.</strong> 导出和导入</a></li><li class="chapter-item expanded "><a href="../操作容器/删除.html"><strong aria-hidden="true">5.6.</strong> 删除</a></li></ol></li><li class="chapter-item expanded "><a href="../数据管理/数据管理.html"><strong aria-hidden="true">6.</strong> 数据管理</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../数据管理/数据卷.html"><strong aria-hidden="true">6.1.</strong> 数据卷</a></li><li class="chapter-item expanded "><a href="../数据管理/挂载主机目录.html"><strong aria-hidden="true">6.2.</strong> 挂载主机目录</a></li></ol></li><li class="chapter-item expanded "><a href="../访问仓库/访问仓库.html"><strong aria-hidden="true">7.</strong> 访问仓库</a></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Docker Hub</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.2.</strong> 私有仓库</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.3.</strong> Nexus3</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 使用网络</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> ...</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Docker</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="仓库"><a class="header" href="#仓库">仓库</a></h1>
+<p>Image 构建完成后，可以很容易的在当前宿主机上运行，但是如果需要在其它服务器上使用这个 Image ，就需要一个集中的存储、分发 Image 的服务，Docker Registry 就是这样的服务。</p>
+<p>一个 Docker Registry 中可以包含多个 Repository；每个 Repository 可以包含多个 Tag；每个 Tag 对应一个 Image。</p>
+<p>通常，一个 Repository 会包含同一个软件不同版本的 Image ，而 Tag 就常用于对应该软件的各个版本。我们可以通过 <Repository>:<Tag> 的格式来指定具体是这个软件哪个版本的 Image。如果不给出 Tag，将以 latest 作为默认 Tag。</p>
+<p>以 Ubuntu  Image 为例，ubuntu 是 Repository 的名字，其内包含有不同的版本 Tag，如16.04、18.04。可以通过 ubuntu:16.04，或者 ubuntu:18.04 来具体指定所需哪个版本的 Image 。如果忽略了 Tag，比如 ubuntu，那将视为 ubuntu:latest。</p>
+<p>Repository 名经常以两段式路径形式出现，比如 jwilder/nginx-proxy，前者往往意味着 Docker Registry 多用户环境下的用户名，后者则往往是对应的软件名。但这并非绝对，取决于所使用的具体 Docker Registry 的软件或服务。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../基本概念/容器.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../安装Docker/安装Docker.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../基本概念/容器.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../安装Docker/安装Docker.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
