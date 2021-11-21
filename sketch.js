@@ -27,7 +27,6 @@ function setup() {
  cnv.position(document.body.clientWidth/2 - 200,100)
 	loadImage("image/icon/1.jpg", function(img) {
 		img.loadPixels();
-		console.log(img);
 		for (var x = 0; x < imgWidth; x++) {
 			for (var y = 0; y < imgHeight; y++) {
 				var loc = y * imgWidth + x; // calculate X, Y pixel number into Pixel Array
